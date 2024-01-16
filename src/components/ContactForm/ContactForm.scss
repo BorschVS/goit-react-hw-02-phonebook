@@ -1,0 +1,27 @@
+@use 'src/styles/shared.scss';
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+}
+
+.Form__label {
+  @extend %label;
+  margin-bottom: 10px;
+}
+
+.Form__input {
+  @extend %input;
+  margin-top: 5px;
+}
+
+.Form__button {
+  @extend %button;
+}

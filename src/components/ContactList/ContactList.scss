@@ -1,0 +1,47 @@
+@import 'src/styles/shared.scss';
+
+// li {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   gap: 5px;
+// }
+
+.ContactList {
+  list-style: none;
+  padding: 0;
+}
+
+.ContactList__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.ContactList__item p.text {
+  margin-right: 10px;
+}
+
+.ContactList__item a.number {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.Delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Delete-button:hover {
+  background-color: #c0392b;
+}

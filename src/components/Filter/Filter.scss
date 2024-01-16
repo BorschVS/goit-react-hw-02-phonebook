@@ -1,0 +1,11 @@
+@import 'src/styles/shared.scss';
+
+.Filter__label {
+  @extend %label;
+  gap: 5px;
+}
+
+.Filter__input {
+  @extend %input;
+  max-width: 200px;
+}
