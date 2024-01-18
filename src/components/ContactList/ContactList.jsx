@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactItem from 'components/ContactItem';
 import './ContactList.scss';
 
 const ContactList = ({ contacts, deleteContact }) => {
@@ -6,15 +7,13 @@ const ContactList = ({ contacts, deleteContact }) => {
     <ul className="ContactList">
       {contacts.map(({ id, name, number }) => {
         return (
-          <li className="ContactList__item" key={id}>
-            <p className="text">{name}</p>
-            <a className="number" href="tel">
-              {number}
-            </a>
-            <button className="Delete-button" onClick={() => deleteContact(id)}>
-              Delete
-            </button>
-          </li>
+          <ContactItem
+            key={id}
+            id={id}
+            name={name}
+            number={number}
+            onDelete={deleteContact}
+          />
         );
       })}
     </ul>

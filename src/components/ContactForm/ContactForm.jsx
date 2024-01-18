@@ -15,6 +15,13 @@ class ContactForm extends Component {
     }));
   };
 
+  resetForm = () => {
+    this.setState({
+      name: '',
+      number: '',
+    });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
     const { onSubmit, contains } = this.props;
@@ -23,6 +30,8 @@ class ContactForm extends Component {
     contains(name)
       ? alert(`${name} is already in contacts`)
       : onSubmit(this.state);
+
+    this.resetForm();
   };
 
   render() {
