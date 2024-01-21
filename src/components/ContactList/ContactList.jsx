@@ -1,10 +1,10 @@
 import React from 'react';
 import ContactItem from 'components/ContactItem';
-import './ContactList.scss';
+import css from './ContactList.module.css';
 
 const ContactList = ({ contacts, deleteContact }) => {
   return (
-    <ul className="ContactList">
+    <ul className={css.ContactList}>
       {contacts.map(({ id, name, number }) => {
         return (
           <ContactItem

@@ -1,17 +1,3 @@
-@import 'src/styles/shared.scss';
-
-// li {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   gap: 5px;
-// }
-
-.ContactList {
-  list-style: none;
-  padding: 0;
-}
-
 .ContactList__item {
   display: flex;
   justify-content: space-between;
@@ -32,7 +18,7 @@
   color: #333;
 }
 
-.Delete-button {
+.Delete__button {
   background-color: #e74c3c;
   color: white;
   border: none;
@@ -42,6 +28,6 @@
   transition: background-color 0.3s ease;
 }
 
-.Delete-button:hover {
+.Delete__button:hover {
   background-color: #c0392b;
 }
