@@ -31,7 +31,7 @@ class ContactForm extends Component {
       ? alert(`${name} is already in contacts`)
       : onSubmit(this.state);
 
-    this.resetForm();
+    !contains(name) && this.resetForm();
   };
 
   render() {

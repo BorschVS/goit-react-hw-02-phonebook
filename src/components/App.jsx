@@ -4,8 +4,6 @@ import ContactForm from './ContactForm';
 import Filter from './Filter';
 import ContactList from './ContactList';
 
-import '../styles/base.scss';
-
 class App extends Component {
   state = {
     contacts: [
@@ -46,10 +44,10 @@ class App extends Component {
     );
   };
 
-  contactExists = name => {
+  contactExists = currentName => {
     const { contacts } = this.state;
 
-    return contacts.find(contact => contact.name === name) !== undefined;
+    return contacts.find(({ name }) => name === currentName) !== undefined;
   };
 
   render() {
